@@ -1,0 +1,10 @@
+.movies-container {
+    width: 100%;
+    height: 800px;
+}
+
+.carousel1 {
+    margin: 50px auto;
+    width: 400px;
+    height: 400px;
+}
