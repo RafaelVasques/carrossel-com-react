@@ -1,28 +1,108 @@
+@import url("../../base-style.css");
+
 .card {
     position: relative;
-    margin: 0 5px;
     height: 100%;
-    background-color: aqua;
+    background-color: var(--secondary-marvel-red);
     background-size: cover;
+    background-position: center 0;
+}
+
+.card-information {
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    width: 100%;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(241,30,34, 0.5);
+    transition: all 0.5s ease-in-out;
+    backdrop-filter: blur(5px);
+}
+
+.card-information:hover {
+    background-color: var(--primary-marvel-red);
+    height: 225px;
+}
+
+.gg-chevron-double-up-o {
+    margin: -40px;
+}
+
+.movie-title-wrapper {
+    position: absolute;
+}
+
+.movie-title-wrapper h1 {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+} 
+
+.movie-info-wrapper {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.movie-year {
+    color: var(--main-text-color)
+}
+
+.movie-rate-wrapper {
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-text-color)
+}
+
+.gg-hello{
+    transform: scale(0.8);
+    margin-right: 5px;
+}
+
+.synopsis-wrapper {
+    padding: 0 10%;
+    width: 100%;
+    margin-top: 70px;
+    position: absolute;
+}
+
+.synopsis-header {
+    display: flex;
+}
+
+.gg-file-document {
+    transform: scale(0.8);
+    margin-right: 5px;
+}
+
+.synopsis {
+    padding: 0 10px 0 0;
+    margin-top: 5px;
+    height: 100px;
+    overflow-y: scroll;
 }
 
 .trash-button{
     position: absolute;
     right: 20px;
-    bottom: 20px;
+    top: 20px;
     z-index: 4;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 3px 5px 5px 5px;
-    width: 22px;
-    height: 22px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
-    background-color: #333;
+    background-color: var(--primary-marvel-red);
     cursor: pointer;
-    margin-left: 50px;
+    margin-left: 50px; 
 }
 
 .trash-button:hover {
-    background-color: #555;
+    background-color: #ff797c;
 }

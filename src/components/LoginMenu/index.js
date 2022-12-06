@@ -17,14 +17,17 @@ export default function LoginMenu (){
         api.logout();
         setUser(undefined);
     }
-
+    console.log(user)
     return (
         <div className='login-menu'>
             {
                 user?
-                    <div onClick={logout}>Logout</div>
+                    <>
+                        <div className="welcome-message">{user.user}</div>
+                        <div className="login-logout" onClick={logout}>Logout</div>
+                    </>
                 :
-                    <div onClick={login}>Login</div>
+                    <div className="login-logout" onClick={login}>Login</div>
             }
         </div>
     );

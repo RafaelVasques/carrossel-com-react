@@ -1,10 +1,27 @@
-.movies-container {
-    width: 100%;
-    height: 800px;
-}
+@import url("../../base-style.css");
 
 .carousel1 {
-    margin: 50px auto;
-    width: 400px;
-    height: 400px;
+    margin-top: 30px;
+    width: 100%;
+    height: 125vw;
+}
+
+@media screen and (min-width: 425px) {
+    .carousel1 {
+        margin-top: 50px;
+        height: 115vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .carousel1 {
+        margin-top: 50px;
+        height: 100vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .carousel1 {   
+        height: 35vw;
+    }
 }

@@ -1,35 +1,96 @@
+@import url("../../base-style.css");
+
 .login-container {
     height: 100%;
     display: flex;
+    margin: 100px 20px;
+    padding: 50px 20px;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
 }
 
 .login-container h1 {
     font-size: 30px;
 }
 
-.login-form {
+.login-input-wrapper {
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    background-color: var(--main-input-color);
 }
 
-.login-form label {
-    margin-top: 15px;
+.gg-lock {
+    margin: 5px 18px;
+    bottom: 5px;
+    color: var(--main-bg-color);
 }
 
-.login-form input {
-    width: 300px;
+.gg-mail {
+    margin: 5px 13px;
+    width: 22px;
+    transform: scale(1.1);
+    color: var(--main-bg-color);
+}
+
+.login-input-wrapper input {
+    width: 100%;
     height: 30px;
-    margin-top: 5px;
+    padding-left: 0;
+}
+
+.login-container button {
+    width: 100%;
+    height: 50px;
+    background-color: var(--primary-marvel-red);
     border: none;
     border-radius: 5px;
-    font-size: 18px;
+    color: var(--main-text-color);
+    margin-top: 25px;
+    font-size: 20px;
 }
 
-.login-form button {
-    margin-top: 5px;
-    font-size: 20px;
+.invalid-user-alert {
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 584px) {
+    .login-container {
+        margin: 100px 100px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .login-container {
+        margin: 100px 200px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .login-container {
+        margin: 100px 300px;
+    }
+}
+
+@media screen and (min-width: 1232px) {
+    .login-container {
+        margin: 100px 400px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .login-container {
+        margin: 100px 400px;
+    }
 }

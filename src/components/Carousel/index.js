@@ -30,17 +30,21 @@ export default function Carousel(props) {
 
     }
 
+    function handleResize(){
+        let offsetWidth = wrapper.current?.offsetWidth ?? 240;
+        setOffsetLeft(currentCard * -offsetWidth);
+    }
+
     useEffect(() => {
 
-        let offsetWidth = wrapper.current?.offsetWidth ?? 240;
-        offsetWidth += 10;  // margem dos cards
-        setOffsetLeft(currentCard * -offsetWidth);
+        handleResize()
+        window.addEventListener('resize', handleResize)
 
     },[wrapper.current, currentCard])
 
     return (
 
-        <div className={props.className}>
+        <div className={`${props.className} page-padding`}>
         
             <div className='carousel-container'>
                 

@@ -18,11 +18,38 @@ export default function MovieCard (props){
         <div className='card' style={{
             backgroundImage: `url(/images/${props.data.image})`,
             width: `${props.width ?? 0}px`}}>
-            <div>{props.data.title}</div>
-            <div>{props.data.image}</div>
-            <div>{props.data.rate}</div>
-            <div>{props.data.year}</div>
-            <div>{props.data.synopsis}</div>
+            
+            <div className="card-information">
+
+                <i className="gg-chevron-double-up-o"></i>
+                
+                <div className="movie-title-wrapper">
+                    <h1>{props.data.title}</h1>
+                    <div className="movie-info-wrapper">
+                        <div className="movie-rate-wrapper">
+                            <i className="gg-hello"></i>
+                            Rate: {props.data.rate}
+                        </div>
+                        <div className="movie-year">
+                            Ano - {props.data.year}
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div className="synopsis-wrapper">
+                    <div className="synopsis-header">
+                        <i className="gg-file-document"></i>
+                        Sinopese:
+                    </div>
+                    <div className="synopsis">
+                        {props.data.synopsis} dasdasdadasd
+                    </div>
+                    
+                </div>
+
+            </div>
+
             {user?
                 <div className="trash-button" onClick={deleteImage}>
                     <div className="gg-trash"></div>

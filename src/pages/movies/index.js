@@ -22,6 +22,7 @@ function MoviesPage() {
 
   return (
     <div className='movies-container'>
+        <LoginMenu />
         <Carousel
           data={carouselData}
           className='carousel1'/>
@@ -31,7 +32,6 @@ function MoviesPage() {
           <CreateMovieForm />
           :null
         }
-        <LoginMenu />
     </div>
   );
 

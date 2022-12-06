@@ -30,23 +30,26 @@ function LoginPage() {
         }).catch(()=>{setHasError(true)});
     }
 
-  return (
-    <div className='login-container'>
-        <h1>Login</h1>
-        <div className='login-form'>
-            <label>
-                E-mail
-                <input type='email' onChange={changeEmail}/>
-            </label>
-            <label>
-                Senha
-                <input type='password' onChange={changePassword} />
-            </label>
-            <button onClick={send}>Entrar</button>
-            {hasError ? <p>Usuário inválido</p> : null}
+    return (
+        <div className='login-container'>
+            
+            <h1>Sign In</h1>
+            
+            <div className='login-input-wrapper'>
+                <i className="gg-mail"></i>
+                <input required type='email' onChange={changeEmail} placeholder='E-mail'/>
+            </div>
+
+            <div className='login-input-wrapper'>
+                <i className="gg-lock"></i>
+                <input required type='password' onChange={changePassword} placeholder='Password'/>
+            </div>
+            
+            <button onClick={send}>Login</button>
+            {hasError ? <p className="invalid-user-alert">Usuário inválido!</p> : null}
+            
         </div>
-    </div>
-  );
+    );
 
 }
 

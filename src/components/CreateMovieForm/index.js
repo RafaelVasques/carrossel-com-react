@@ -21,17 +21,24 @@ function CreateMovieForm() {
     }
 
     return (
-        <div className='create-movie-form'>
-            <h2>Cadastro</h2>
+        <div className='create-movie-form page-padding'>
+            <h2>Cadastrar novo filme da Marvel</h2>
             <form onSubmit={handleSubmit}>
-                <ul>
-                    <li><label>Título <input type="text" name="title" /></label></li>
-                    <li><label>Sinopse <input type="text" name="synopsis" /></label></li>
-                    <li><label>Ano <input type="text" name="year" /></label></li>
-                    <li><label>Rate <input type="text" name="rate" /></label></li>
-                    <li><label>Image <input type="file" name="file" /></label></li>
-                    <li><button type="submit">Cadastrar</button></li>
-                </ul>
+                    <input required type="text" name="title" placeholder='Título'/>
+                    
+                    <div className='form-line2'>
+                        <input required type="number" className="input-rate" name="rate" placeholder='Rate'/>
+                        <input required type="number" name="year" placeholder='Ano'/>
+                    </div>
+                    
+                    <textarea required name="synopsis" placeholder='Sinopse'/>
+                    
+                    <div className="choose-image">
+                        <label htmlFor="file-image" >Escolher Imagem</label>
+                    </div>
+
+                    <input required type="file" name="file" placeholder='Imagem' id="file-image"/>
+                    <button type="submit" >Cadastrar</button>
             </form>
         </div>
     );
